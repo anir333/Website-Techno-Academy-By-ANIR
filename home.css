@@ -12,12 +12,9 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    /* background: linear-gradient(115deg, #71b7e6, #9b59b6); */
-    /* animation: boy_background 25s infinite; */
     background-image: linear-gradient(115deg, #71b7e6, #0c88db, #5124ba,/* #6503c8,*/ /*#8b6edb,*/ #9b59b6, #5124ba, #0c88db, #71b7e6);
     background-size: 1000%; 
     animation: body-background 15s infinite alternate-reverse;
-    /* transition: background-position 1s; */
 }
 /* End GENERAL (Body, website margins) */
 
@@ -26,10 +23,6 @@ nav {
     text-align: center;
     padding: 25px;
     width: 100%;
-    /* position: fixed; */
-    /* position: fixed; only if fixed  */
-    /* margin-top: -150px; only if fixed 
-    background: linear-gradient(115deg, #71b7e6, #9b59b6); */
 }
 nav ul {
     display: flex;
@@ -67,7 +60,6 @@ nav ul a:hover {
 
 /* Body */
 .title-about-section {
-    /* margin-top: 150px; only if fixed */
     margin-top: 35px;
     border: 0px solid black;
     display: flex;
@@ -75,7 +67,6 @@ nav ul a:hover {
     /* Title */
     .title {
         width: 100%;
-        /* margin: auto; */
         text-align: left;
         padding: auto;
         flex-basis: 50%;
@@ -93,8 +84,6 @@ nav ul a:hover {
         background: -webkit-linear-gradient(115deg, rgb(52, 43, 85), rgb(13, 14, 107));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        /* border: 1px solid black; */
-        /* padding-left: 35px; */
     }
     .title h1 span:nth-child(4), .title h1 span:nth-child(5) {
         background: -webkit-linear-gradient(rgb(184, 176, 176), rgb(241, 239, 239));
@@ -124,7 +113,6 @@ nav ul a:hover {
     /* Introduction */
     .introduction-page {
         flex-basis: 50%;
-        /* border: 2px solid rgb(14, 12, 12); */
     }
     input[type="checkbox"] {
         display: none;
@@ -133,7 +121,6 @@ nav ul a:hover {
         margin-top: 27px;
         flex-basis: 50%;
         cursor: pointer;
-        /* border: 1px solid black; */
         height: 200px;
         width: 80%;
         border-radius: 10px;
@@ -142,7 +129,6 @@ nav ul a:hover {
         display: flex;
         align-items: center;
         justify-content: center;
-        /* background: linear-gradient(200deg, #42aaf0, #318ecd, #0533bd); */
         box-shadow: rgba(42, 67, 92, 4.7) 10px 20px 30px 5px;
     }
     .about h1 {
@@ -164,18 +150,13 @@ nav ul a:hover {
         animation: arrow-hover 1s forwards;
     }
     input[type="checkbox"]:checked ~ .about-page {
-        /* display: none; */
         animation: about-section-off 1s forwards;
         display: none;
-        /* transition: 12s; */
     }
     .about-page {
         height: 777px;
         margin: 45px auto;
         width: 85%;
-        /* border: 1px solid red; */
-        /* background-color: #36096d; */
-        /* background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%); */
         box-shadow: rgba(42, 67, 92, 4.7) 4px 13px 45px 5px;    
         border-radius: 20px;
         animation: about-section-on 1s forwards;
@@ -202,23 +183,19 @@ nav ul a:hover {
     }
     .about-page .first-paragraph {
         display: flex;
-        /* border: 1px solid rgb(3, 2, 2); */
         animation: about-first-paragraph-shrink-reverse 1s forwards;
     }
     .about-page .first-paragraph .text-first-paragraph {
-        /* border: 1px solid red; */
         flex-basis: 50%;
         
     }
     .about-page .first-paragraph .text-first-paragraph p {
         margin: auto;
         width: 80%;
-        /* border: 1px solid blue; */
         margin: 50px;
         text-align: justify;
         font-size: 20px;
         line-height: 28px;
-        /* font-family:'Times New Roman', Times, serif ; */
         font-family: 'Kdam Thmor Pro', sans-serif;
         font-family: 'Raleway', sans-serif;
         color: wheat;
@@ -226,7 +203,6 @@ nav ul a:hover {
     }
     .about-page .text-first-paragraph p span:hover {
         animation: paragraph-title-letters 1s forwards;
-        /* transition: 0.52s ease-in-out; */
         background: linear-gradient(115deg, #1d92e0, #8f1fbb);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -239,15 +215,12 @@ nav ul a:hover {
     .about-page .first-paragraph .image-first-about {
         flex-basis: 50%;
         text-align: center;
-        /* border: 1px solid black; */
-        /* vertical-align: middle; */
         display: flex;
     }
     .about-page .first-paragraph img {
         height: 360px;
         width: auto;
         border-radius: 20px;
-        /* height: 270px; */
         margin: auto;
     }
     input[type="checkbox"]:not(:checked) ~ .about-page .questions {
@@ -255,9 +228,6 @@ nav ul a:hover {
     }
     input[type="checkbox"]:checked ~ .about-page .questions {
         animation: about-questions-shrink 1s forwards;
-    }
-    input[type="checkbox"]:not(:checked) ~ .about-page .first-paragraph {
-        /* animation: about-first-paragraph-shrink-reverse 1s forwards; */
     }
     input[type="checkbox"]:checked ~ .about-page .first-paragraph .text-first-paragraph p{
         animation: about-first-paragraph-shrink 1s forwards;
@@ -273,7 +243,6 @@ nav ul a:hover {
 
 /* Go to menu Section */
 .Go-TO-Menu {
-    /* border: 2px solid green; */
     height: 80px;
     text-align: center;
     margin: auto;
@@ -322,7 +291,6 @@ nav ul a:hover {
 }
 .Final-section .Programming-Knowledge .opacity {
     width: 100%;
-    /* height: 215px; */
     height: inherit;
     z-index: 1;
     opacity: 83%;
@@ -336,7 +304,6 @@ nav ul a:hover {
     position: absolute;
     z-index: 1;
     color: white;
-    /* border: 2px solid black; */
     margin: auto;
     width: 100%;
     text-align: center;
@@ -356,7 +323,6 @@ nav ul a:hover {
 }
 .Final-section .Programming-Knowledge .informacion {
     color: white;
-    /* border: 1px solid black; */
     background-color: #0533bd;
     border-radius: 10px;
     margin-top: 45px;
@@ -395,7 +361,6 @@ nav ul a:hover {
     grid-column-end: 15; 
     grid-row-start: 2;
     margin-top: -60px;
-    /* width: 450%; */ 
     height: 435px;
     
     background-image: url(images/programming-languages.png);
@@ -419,7 +384,6 @@ nav ul a:hover {
     position: absolute;
     z-index: 1;
     color: white;
-    /* border: 2px solid black; */
     margin: auto;
     width: 100%;
     text-align: center;
@@ -433,11 +397,9 @@ nav ul a:hover {
 }
 .Final-section .Programming-Languages .informacion {
     color: white;
-    /* border: 1px solid black; */
     background-color: gray;
     border-radius: 10px;
     margin-top: 45px;
-    /* margin-top: 75px; for media*/
     height: 400px;
     position: absolute;
     width: 100%;
@@ -480,8 +442,6 @@ nav ul a:hover {
     background-image: url(images/Html-CSSfinal.png);
     background-repeat: repeat-y;
     background-size: 108%;
-    /* background-size:auto; */
-    /* background-repeat: repeat-y; */
     border-radius: 18px;
     position: relative;
 }
@@ -500,7 +460,6 @@ nav ul a:hover {
     position: absolute;
     z-index: 1;
     color: black;
-    /* border: 2px solid black; */
     margin: auto;
     width: 100%;
     text-align: center;
@@ -516,11 +475,9 @@ nav ul a:hover {
 }
 .Final-section .Html-CSS .informacion {
     color: white;
-    /* border: 1px solid black; */
     background-color: #00ffdc;
     border-radius: 10px;
     margin-top: 45px;
-    /* margin-top: 75px; for media*/
     height: 180px;
     position: absolute;
     width: 100%;
@@ -567,7 +524,6 @@ nav ul a:hover {
     margin-top: -60px; 
     height: 215px;
     background-image: url(images/JavaScript-background.png);
-    /* background-repeat: repeat; */
     background-size: 100%;
     border-radius: 18px;
     position: relative;
@@ -587,7 +543,6 @@ nav ul a:hover {
     position: absolute;
     z-index: 1;
     color: white;
-    /* border: 2px solid black; */
     margin: auto;
     width: 100%;
     text-align: center;
@@ -601,15 +556,12 @@ nav ul a:hover {
     background-color: #f8da59 ;
     box-shadow: 0px 13px 15px -2px rgba(0,0,0,0.9);
     transition: 1s ease-in-out;
-    /* border: 1px solid black; */
 }
 .Final-section .JavaScript .informacion {
     color: white;
-    /* border: 1px solid black; */
     background-color: #f8da59;
     border-radius: 10px;
     margin-top: 45px;
-    /* margin-top: 75px; for media*/
     height: 180px;
     position: absolute;
     width: 100%;
@@ -646,13 +598,10 @@ nav ul a:hover {
 .Final-section .Python {
     grid-column-start: 8;
     grid-column-end: 15; 
-    /* width: 450%; */
     height: 215px;
     background-image: url(images/Pythonfinal.png);
     background-repeat: repeat-y;
     background-size: 112%;
-    /* background-size:auto; */
-    /* background-repeat: repeat-y; */
     border-radius: 18px;
     position: relative;
 }
@@ -671,7 +620,6 @@ nav ul a:hover {
     position: absolute;
     z-index: 1;
     color: white;
-    /* border: 2px solid black; */
     margin: auto;
     width: 100%;
     text-align: center;
@@ -682,16 +630,12 @@ nav ul a:hover {
 }
 .Final-section .Python:hover h1 {
     animation: title-up-programming-knowledge 1s forwards;
-    /* color: white; */
-    /* transition: 1s; */
 } 
 .Final-section .Python .informacion {
     color: white;
-    /* border: 1px solid black; */
     background-color: #0976b9;
     border-radius: 10px;
     margin-top: 45px;
-    /* margin-top: 75px; for media*/
     height: 180px;
     position: absolute;
     width: 100%;
@@ -754,7 +698,6 @@ nav ul a:hover {
     position: absolute;
     z-index: 1;
     color: black;
-    /* border: 2px solid black; */
     margin: auto;
     width: 100%;
     text-align: center;
@@ -768,11 +711,9 @@ nav ul a:hover {
 }
 .Final-section .Ruby .informacion {
     color: white;
-    /* border: 1px solid black; */
     background-color: #fbd3a2;
     border-radius: 10px;
     margin-top: 45px;
-    /* margin-top: 75px; for media*/
     height: 180px;
     position: absolute;
     width: 100%;
@@ -834,7 +775,6 @@ nav ul a:hover {
     position: absolute;
     z-index: 1;
     color: white;
-    /* border: 2px solid black; */
     margin: auto;
     width: 100%;
     text-align: center;
@@ -850,11 +790,9 @@ nav ul a:hover {
 }
 .Final-section .SQL .informacion {
     color: white;
-    /* border: 1px solid black; */
     background-color: #ef0e13;
     border-radius: 10px;
     margin-top: 45px;
-    /* margin-top: 75px; for media*/
     height: 180px;
     position: absolute;
     width: 100%;
@@ -895,7 +833,6 @@ nav ul a:hover {
     margin-top: -120.5px;  
     height: 210px;
     background-image: url(images/Swift.png);
-    /* background-repeat: repeat; */
     background-size: 100%;
     border-radius: 18px;
     position: relative;
@@ -915,7 +852,6 @@ nav ul a:hover {
     position: absolute;
     z-index: 1;
     color: white;
-    /* border: 2px solid black; */
     margin: auto;
     width: 100%;
     text-align: center;
@@ -929,11 +865,9 @@ nav ul a:hover {
 }
 .Final-section .Swift .informacion {
     color: white;
-    /* border: 1px solid black; */
     background-color: #fc8437;
     border-radius: 10px;
     margin-top: 45px;
-    /* margin-top: 75px; for media*/
     height: 180px;
     position: absolute;
     width: 100%;
@@ -1054,17 +988,6 @@ nav ul a:hover {
         }
         100% {}
     }
-    /* @keyframes about-section-off {
-        0% {}
-        99% {
-            opacity: 99%;
-            height: 205px;
-        }
-        100% {
-            opacity: 0%;
-            display: none;
-        }
-    } */
     @keyframes paragraph-title-letters {
         0% {}
         100% {
@@ -1167,15 +1090,11 @@ nav ul a:hover {
         }
         100% {
             opacity: 100%;
-            /* margin-top: 0px; */
-            /* margin-top: 100px; */
         }
     }
     @keyframes text-up-hover-programming-knowledge-off {
         0% {
             opacity: 100%;
-            /* margin-top: 0px; */
-            /* margin-top: 100px; */
         }
         100% {
             margin-top: 0px;
@@ -1197,7 +1116,6 @@ nav ul a:hover {
     @keyframes title-background-programming-knowledge {
         0% {}
         100% {
-            /* background-color: #0533bd; */
             background-color: white;
             border-radius: 10px;
             color: black;
