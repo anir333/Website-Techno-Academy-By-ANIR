@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Techno Academy</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+
+    <!-- Navigations Bar -->
+    <nav id="nav-bar">
+        <ul>
+            <a href="home.html">
+                <li>Home</li>
+            </a>
+            <a href="Programming-knowledge.html">
+                <li>Programming <br> Knowledge</li>
+            </a>
+            <a href="Programming-Languages.html">
+                <li>Programming <br> Languages</li>
+            </a>
+            <a href="Html-CSS.html">
+                <li>Html/CSS</li>
+            </a>
+            <a href="JavaScript.html">
+                <li>JavaScript</li>
+            </a>
+            <a href="Python.html">
+                <li>Python</li>
+            </a>
+            <a href="Ruby.html">
+                <li>Ruby</li>
+            </a>
+            <a href="SQL.html">
+                <li>SQL</li>
+            </a>
+            <a href="Swift.html">
+                <li>Swift</li>
+            </a>
+            <a href="Contact.html">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </nav>
+    <!-- End Navigations Bar -->
+
+    <!-- Contact form -->
+    
+    <div class="form-wrapper">
+    <div class="one">
+        <div>
+            <div>
+                <div>
+                    <h1 >
+                    Contact Us
+                    </h1>
+                    <div class="under-contact">
+                    <p class="one">
+                    Fill up the form below to send us a message.
+                    </p>
+                <div>
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                    <input type="hidden" name="access_key" value="779dba5d-25bf-4290-871f-1f685ad11d80" />
+                    <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+                    <input type="checkbox" name="botcheck" id="" style="display: none;" />
+                    <br>
+                    <div class="mb-6">
+                    <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400 two">Full Name:</label>
+                    <br>
+                    <input type="text" name="name" id="name" placeholder="John Doe" required/>
+            </div>
+            <div>
+              <label for="email" class="two">Email Address:</label>
+              <br>
+              <input type="email" name="email" id="email" placeholder="you@company.com" required/>
+            </div>
+            <div>
+              <label for="phone" class="two">Phone Number:</label>
+              <br>
+              <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required/>
+            </div>
+            <div>
+              <label for="message" class="two">Your Message</label>
+              <br>
+              <textarea rows="5" name="message" id="message" placeholder="Your Message" required></textarea>
+            </div>
+            <div>
+              <button type="submit">
+                Send Message
+              </button>
+            </div>
+            <p style="font-size:30px; color:white;" id="result"></p>
+        </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <!-- End Contact form -->
+</body>
+
+
+<script>
+    const form = document.getElementById("form");
+    const result = document.getElementById("result");
+
+    form.addEventListener("submit", function (e) {
+    const formData = new FormData(form);
+    e.preventDefault();
+    var object = {};
+    formData.forEach((value, key) => {
+        object[key] = value;
+    });
+    var json = JSON.stringify(object);
+    result.innerHTML = "Please wait...";
+
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+        },
+        body: json
+    })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        result.innerHTML = json.message;
+        result.classList.remove("text-gray-500");
+        result.classList.add("text-green-500");
+      } else {
+        console.log(response);
+        result.innerHTML = json.message;
+        result.classList.remove("text-gray-500");
+        result.classList.add("text-red-500");
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      result.innerHTML = "Something went wrong!";
+    })
+    .then(function () {
+      form.reset();
+      setTimeout(() => {
+        result.style.display = "none";
+      }, 5000);
+    });
+    });
+</script>
+</html>

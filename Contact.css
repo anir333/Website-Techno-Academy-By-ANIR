@@ -1,0 +1,147 @@
+
+/* GENERAL (Body, website margins) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    /* background: linear-gradient(115deg, #71b7e6, #9b59b6); */
+    /* animation: boy_background 25s infinite; */
+    background-image: linear-gradient(115deg, #71b7e6, #0c88db, #5124ba,/* #6503c8,*/ /*#8b6edb,*/ #9b59b6, #5124ba, #0c88db, #71b7e6);
+    background-size: 1000%; 
+    animation: body-background 15s infinite alternate-reverse;
+    /* transition: background-position 1s; */
+}
+/* End GENERAL (Body, website margins) */
+
+/* Navigation Bar */
+nav {
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+}
+nav ul {
+    display: flex;
+}
+nav ul a {
+    flex-basis: 10%;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    /* border: 0px solid red; */
+    margin: auto 3px;
+    padding: 20px;
+    box-shadow: rgba(30, 77, 123, .7) 10px 18px 24px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+    animation:  nav_bar_hover_off ease-in-out .5s forwards;
+    background-color: none;
+    transition: .9s;
+}
+nav ul a:nth-child(10) { 
+    background-image: linear-gradient(315deg, #26c2c2 0%, #ab55a8 74%);
+}
+nav ul a:nth-child(2), nav ul a:nth-child(3) {
+    padding: 10px;
+}
+nav ul a:hover {
+    background-color: white;
+    transition: .3s;
+    opacity: 88%;
+    color: black;
+    animation:  nav_bar_hover_on ease-in-out .5s forwards;
+    box-shadow: white 30px 10px 0px 10px rgba(30, 77, 123, .5);
+}
+/* End Navigation BAR */
+
+/* Contact Form */
+.form-wrapper {
+    /* border: 1px solid black; */
+    text-align: center;
+    padding-top: 30px;
+}
+.form-wrapper h1 {
+    color: white;
+    font-size: 45px;
+    font-weight: bolder;
+}
+.form-wrapper .under-contact {
+    text-align: left;
+    /* border: 1px solid red; */
+    margin: auto;
+    width: 40%;
+}
+.form-wrapper .under-contact .one {
+    color: white;
+    font-size: 25px;
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+.form-wrapper .under-contact .two {
+    color: white;
+    font-size: 25px;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+input[placeholder="John Doe"], input[placeholder="you@company.com"], input[placeholder="+1 (555) 1234-567"], input[placeholder="Your Message"] {
+    size: 50px;
+    width: 40%;
+    background-color: none;
+    border-radius: 20px;
+    border: 1px black solid;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+button {
+    margin: 30px;
+    padding: 15px;
+    background-color: navajowhite;
+    border-radius: 20px;
+}
+button:hover {
+    box-shadow: rgba(30, 77, 123, .7) 1px 1px 10px 14px;  
+    transition: .5s;
+    cursor: pointer;
+}
+/* End Contact Form */
+
+
+/* Keyframes (Animations) */
+    /* Body Animation Keyframes */
+    @keyframes body-background {
+        0% {
+            background-position: left;
+        }
+        100% {
+            background-position: right;
+        }
+    }
+    /* End Body Animation Keyframes */
+
+    /* Nav Bar Keyframes */
+    @keyframes nav_bar_hover_on {
+        100% {
+            margin-left: 33px;
+            margin-right: 33px;
+            padding-left: 43px;
+            padding-right: 43px;
+        }
+        0% {}
+    }
+    @keyframes nav_bar_hover_off {
+        0% {
+            margin-left: 33px;
+            margin-right: 33px;
+            padding-left: 33px;
+            padding-right: 33px;
+        }
+        100% {}
+    }
+    /* End Nav Bar Keyframes */
+/* End Keyframes (Animations) */
