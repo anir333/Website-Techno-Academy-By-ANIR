@@ -49,57 +49,82 @@
     <!-- Contact form -->
     
     <div class="form-wrapper">
-    <div class="one">
-        <div>
-            <div>
-                <div>
-                    <h1 >
-                    Contact Us
-                    </h1>
-                    <div class="under-contact">
-                    <p class="one">
-                    Fill up the form below to send us a message.
-                    </p>
-                <div>
-                    <form action="https://api.web3forms.com/submit" method="POST" id="form">
-                    <input type="hidden" name="access_key" value="779dba5d-25bf-4290-871f-1f685ad11d80" />
-                    <input type="hidden" name="subject" value="New Submission from Web3Forms" />
-                    <input type="checkbox" name="botcheck" id="" style="display: none;" />
-                    <br>
-                    <div class="mb-6">
-                    <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400 two">Full Name:</label>
-                    <br>
-                    <input type="text" name="name" id="name" placeholder="John Doe" required/>
-            </div>
-            <div>
-              <label for="email" class="two">Email Address:</label>
+      <h1>
+        Contact Us
+      </h1>
+      <div class="under-contact">
+        <p class="one">
+          Fill up the form below to send us a message.
+        </p>
+        <div class="formulaire-wrapper">
+          <form action="https://api.web3forms.com/submit" method="POST" id="form">
+            <div class="left-side">
+            <input type="hidden" name="access_key" value="779dba5d-25bf-4290-871f-1f685ad11d80" />
+            
+            <input type="hidden" name="subject" value="New Submission from Web3Forms"/>
+            
+            <input type="checkbox" name="botcheck" id="" style="display: none;"/>
+            
+            <br>
+            <!--  -->
+            <div class="Full_name_input">
+              <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400 two">Full Name:</label>
+              
               <br>
+              
+              <input type="text" name="name" id="name" placeholder="John Doe" required/>
+            </div>
+
+            <br>
+
+            <div class="Email_input">
+              <label for="email" class="two">Email Address:</label>
+              
+              <br>
+              
               <input type="email" name="email" id="email" placeholder="you@company.com" required/>
             </div>
-            <div>
+
+            <br>
+
+            <div class="Phone_input">
               <label for="phone" class="two">Phone Number:</label>
+              
               <br>
-              <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required/>
+              
+              <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567"/>
             </div>
-            <div>
-              <label for="message" class="two">Your Message</label>
+          </div>
+
+
+          <div class="right-side">
+            <div class="textarea_input">
+              <label for="message" class="two">Your Message:</label>
+              
               <br>
-              <textarea rows="5" name="message" id="message" placeholder="Your Message" required></textarea>
+              
+              <textarea rows="5" name="message" id="message" placeholder="Your Message"></textarea>
             </div>
-            <div>
+            <div class="button_and_auto">
+            <div class="submit_button_input">
               <button type="submit">
-                Send Message
+                Send Message!
               </button>
             </div>
-            <p style="font-size:30px; color:white;" id="result"></p>
-        </div>
+
+            <p style="margin-top: 25px;
+            margin-left: 25px; font-size: 18px; color:white;" id="result"></p>
+          </div>
+          </div>
           </form>
         </div>
       </div>
     </div>
-  </div>
-  </div>
     <!-- End Contact form -->
+
+    
+<br><br><br>
+
 </body>
 
 
