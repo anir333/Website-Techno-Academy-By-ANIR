@@ -19,15 +19,15 @@ body {
 /* End GENERAL (Body, website margins) */
 
 /* Navigation Bar */
-nav {
+.nav-bar {
     text-align: center;
     padding: 25px;
     width: 100%;
 }
-nav ul {
+.nav-bar ul {
     display: flex;
 }
-nav ul a {
+.nav-bar ul a {
     flex-basis: 10%;
     list-style-type: none;
     text-decoration: none;
@@ -42,13 +42,13 @@ nav ul a {
     background-color: none;
     transition: .9s;
 }
-nav ul a:nth-child(1) { 
+.nav-bar ul a:nth-child(1) { 
     background-image: linear-gradient(315deg, #26c2c2 0%, #ab55a8 74%);
 }
-nav ul a:nth-child(2), nav ul a:nth-child(3) {
+.nav-bar ul a:nth-child(2), .nav-bar ul a:nth-child(3) {
     padding: 10px;
 }
-nav ul a:hover {
+.nav-bar ul a:hover {
     background-color: white;
     transition: .3s;
     opacity: 88%;
@@ -58,192 +58,264 @@ nav ul a:hover {
 }
 /* End Navigation BAR */
 
-/* Body */
+
+/* Media Query Menu Button */
+input[id="menu-button"] {
+    display: none;
+}
+.menu-button {
+    position: fixed;
+    height: 27.3px;
+    width: 40px;
+    margin-left: 35px;
+    cursor: pointer;
+}
+.menu-button div {
+    width: 100%;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: black;
+}
+input[id="menu-button"]:not(:checked) ~ .media-query-nav-bar {
+    margin-left: -255px;
+    transition: 1s;
+}
+input[id="menu-button"]:checked ~ .media-query-nav-bar {
+    margin-left: none;
+    transition: 1s;
+}
+/* End Media Query Menu Button */
+
+/* Media Query Navigation Bar */
+.media-query-nav-bar {
+    text-align: left;
+    margin-top: 45px;
+    position: fixed;
+    padding: 45px;
+    border-bottom-right-radius: 25px; border-top-right-radius: 25px;
+    background-image: linear-gradient(315deg, #26c2c2 0%, #ab55a8 74%);
+    box-shadow: rgba(54, 58, 64, 0.7) -10px 0px 18px 24px;
+    z-index: 100;
+}
+.media-query-nav-bar ul li {
+    /* border: 2px solid red; */
+    animation: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    /* border: 0px solid red; */
+    margin: auto 3px;
+    padding: 20px;
+    box-shadow: rgba(30, 77, 123, .7) 10px 18px 24px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+    animation:  media-query-nav-bar-off ease-in-out .5s forwards;
+    background-color: none;
+    transition: .9s;
+    /* padding-top: 13.5px; */
+}
+.media-query-nav-bar ul li:hover {
+    background-color: white;
+    transition: .3s;
+    opacity: 88%;
+    color: black;
+    animation:  media-query-nav-bar ease-in-out .5s forwards;
+    box-shadow: white 30px 10px 0px 10px rgba(30, 77, 123, .5);
+}
+.media-query-nav-bar ul a li:nth-child(2) {
+    padding-top: 5px;
+    height: 65px;
+}
+/* End Media Query Navigation Bar */
+
+
+/* Title */
 .title-about-section {
     margin-top: 35px;
-    border: 0px solid black;
     display: flex;
 }
-    /* Title */
-    .title {
-        width: 100%;
-        text-align: left;
-        padding: auto;
-        flex-basis: 50%;
-        margin: 67px;
-        margin-left: 120px;
-    }   
-    .title h1 {
-        font-size: 35px;
-        font-weight: bold;
-        font-family: 'Raleway', sans-serif;
-        letter-spacing: 5px;
-        line-height: 65px;
-    }
-    .title h1 span:nth-child(1), .title h1 span:nth-child(2) {
-        background: -webkit-linear-gradient(115deg, rgb(52, 43, 85), rgb(13, 14, 107));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .title h1 span:nth-child(4), .title h1 span:nth-child(5) {
-        background: -webkit-linear-gradient(rgb(184, 176, 176), rgb(241, 239, 239));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 40px;
-    }
-    .title h1 span:nth-child(2) {
-        padding-right: 100px;
-    }
-    .title h1 span {
-        animation: title-letters-off .1s forwards ease-in-out;
-    }
-    .title h1 span:hover {
-        animation: title-letters .4s forwards ease-in-out;
-        margin: 15px 5px;
-        padding-top: 15px;
-        transition: 0.52s ease-in-out;
-        background: linear-gradient(115deg, #1d92e0, #8f1fbb);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        cursor:default;
-        box-shadow: white 30px 10px 0px 10px rgba(30, 77, 123, .5);
-    }
-    /* End Title */
-    
-    /* Introduction */
-    .introduction-page {
-        flex-basis: 50%;
-    }
-    input[type="checkbox"] {
-        display: none;
-    } 
-    .about {
-        margin-top: 27px;
-        flex-basis: 50%;
-        cursor: pointer;
-        height: 200px;
-        width: 80%;
-        border-radius: 10px;
-        text-align: center;
-        vertical-align: middle;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: rgba(42, 67, 92, 4.7) 10px 20px 30px 5px;
-    }
-    .about h1 {
-        color: aliceblue;
-    }
-    .introduction-page a {
-        text-decoration: none
-    }
-    .introduction-page .about .content .arrow {
-        color: white;
-        font-size: 18px;
-        font-weight: bolder;
-        padding: 0;
-        opacity: 0;   
-        margin: -35px 0 0 0;
-        animation: arrow-hover-off 1s forwards;
-    }
-    .introduction-page .about:hover .arrow {
-        animation: arrow-hover 1s forwards;
-    }
-    input[type="checkbox"]:checked ~ .about-page {
-        animation: about-section-off 1s forwards;
-        display: none;
-    }
-    .about-page {
-        height: 777px;
-        margin: 45px auto;
-        width: 85%;
-        box-shadow: rgba(42, 67, 92, 4.7) 4px 13px 45px 5px;    
-        border-radius: 20px;
-        animation: about-section-on 1s forwards;
-    }
-    .about-page .questions { 
-        border: 0px solid black;
-        margin: auto;
-        width:fit-content;
-        padding-top: 35px;
-        line-height: 35px;
-        font-size: 25px;
-        color: white;
-    }
-    .about-page .questions ul li {
-        list-style-type: none;
-    }
-    .about-page .questions p {
-        margin: auto;
-        width: fit-content;
-        margin-top: 25px;
-        border-bottom: 3px solid white;
-        padding: 0 267px 25px 267px;
-        margin-bottom: 25px;
-    }
-    .about-page .first-paragraph {
-        display: flex;
-        animation: about-first-paragraph-shrink-reverse 1s forwards;
-    }
-    .about-page .first-paragraph .text-first-paragraph {
-        flex-basis: 50%;
-        
-    }
-    .about-page .first-paragraph .text-first-paragraph p {
-        margin: auto;
-        width: 80%;
-        margin: 50px;
-        text-align: justify;
-        font-size: 20px;
-        line-height: 28px;
-        font-family: 'Kdam Thmor Pro', sans-serif;
-        font-family: 'Raleway', sans-serif;
-        color: wheat;
-        letter-spacing: 1.5px;
-    }
-    .about-page .text-first-paragraph p span:hover {
-        animation: paragraph-title-letters 1s forwards;
-        background: linear-gradient(115deg, #1d92e0, #8f1fbb);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        cursor:default;
-        transition: 0.52s ease-in-out;
-    }
-    .about-page .text-first-paragraph p span {
-        animation: paragraph-title-letters-off 1s forwards;
-    }
-    .about-page .first-paragraph .image-first-about {
-        flex-basis: 50%;
-        text-align: center;
-        display: flex;
-    }
-    .about-page .first-paragraph img {
-        height: 360px;
-        width: auto;
-        border-radius: 20px;
-        margin: auto;
-    }
-    input[type="checkbox"]:not(:checked) ~ .about-page .questions {
-        animation: about-questions-shrink-reverse 1s forwards;
-    }
-    input[type="checkbox"]:checked ~ .about-page .questions {
-        animation: about-questions-shrink 1s forwards;
-    }
-    input[type="checkbox"]:checked ~ .about-page .first-paragraph .text-first-paragraph p{
-        animation: about-first-paragraph-shrink 1s forwards;
-    }
-    input[type="checkbox"]:not(:checked) ~ .about-page .image-first-about img {
-        animation: about-image-shrink-reverse 1s forwards;
-    }
-    input[type="checkbox"]:checked ~ .about-page .first-paragraph .image-first-about img {
-        animation: about-image-shrink 1s forwards;
-    }
-    /* End Introduction */
-/* End Body */
+.title {
+    width: 100%;
+    text-align: left;
+    padding: auto;
+    flex-basis: 50%;
+    margin: 67px;
+    margin-left: 120px;
+}   
+.title h1 {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 5px;
+    line-height: 65px;
+}
+.title h1 span:nth-child(1), .title h1 span:nth-child(2) {
+    background: -webkit-linear-gradient(115deg, rgb(52, 43, 85), rgb(13, 14, 107));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.title h1 span:nth-child(4), .title h1 span:nth-child(5) {
+    background: -webkit-linear-gradient(rgb(184, 176, 176), rgb(241, 239, 239));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+}
+.title h1 span:nth-child(2) {
+    padding-right: 100px;
+}
+.title h1 span {
+    animation: title-letters-off .1s forwards ease-in-out;
+}
+.title h1 span:hover {
+    animation: title-letters .4s forwards ease-in-out;
+    margin: 15px 5px;
+    padding-top: 15px;
+    transition: 0.52s ease-in-out;
+    background: linear-gradient(115deg, #1d92e0, #8f1fbb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor:default;
+    box-shadow: white 30px 10px 0px 10px rgba(30, 77, 123, .5);
+}
+/* End Title */
+
+/* Introduction */
+.introduction-page {
+    flex-basis: 50%;
+}
+input[id="ABOUT"] {
+    display: none;
+} 
+.about {
+    margin-top: 27px;
+    flex-basis: 50%;
+    cursor: pointer;
+    height: 200px;
+    width: 80%;
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(42, 67, 92, 4.7) 10px 20px 30px 5px;
+}
+.about h1 {
+    color: aliceblue;
+}
+.introduction-page a {
+    text-decoration: none
+}
+.introduction-page .about .content .arrow {
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 0;
+    opacity: 0;   
+    margin: -35px 0 0 0;
+    animation: arrow-hover-off 1s forwards;
+}
+.introduction-page .about:hover .arrow {
+    animation: arrow-hover 1s forwards;
+}
+input[id="ABOUT"]:checked ~ .about-page {
+    animation: about-section-off 1s forwards;
+    display: none;
+}
+.about-page {
+    height: fit-content;
+    margin: 45px auto;
+    width: 85%;
+    box-shadow: rgba(42, 67, 92, 4.7) 4px 13px 45px 5px;    
+    border-radius: 20px;
+    animation: about-section-on 1s forwards;
+}
+.about-page .questions { 
+    border: 0px solid black;
+    margin: auto;
+    width: fit-content;
+    padding-top: 35px;
+    line-height: 35px;
+    font-size: 25px;
+    color: white;
+}
+.about-page .questions ul li {
+    list-style-type: none;
+}
+.about-page .questions p {
+    margin: auto;
+    width: 80%;
+    margin-top: 25px;
+    border-bottom: 3px solid white;
+    /* padding: 0 267px 25px 267px; */
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.about-page .first-paragraph {
+    display: flex;
+    animation: about-first-paragraph-shrink-reverse 1s forwards;
+}
+.about-page .first-paragraph .text-first-paragraph {
+    flex-basis: 50%;
+}
+.about-page .first-paragraph .text-first-paragraph p {
+    margin: auto;
+    width: 80%;
+    margin: 50px;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    color: wheat;
+    letter-spacing: 1.5px;
+}
+.about-page .text-first-paragraph p span:hover {
+    animation: paragraph-title-letters 1s forwards;
+    background: linear-gradient(115deg, #1d92e0, #8f1fbb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor:default;
+    transition: 0.52s ease-in-out;
+}
+.about-page .text-first-paragraph p span {
+    animation: paragraph-title-letters-off 1s forwards;
+}
+.about-page .first-paragraph .image-first-about {
+    flex-basis: 50%;
+    text-align: center;
+    display: flex;
+}
+.about-page .first-paragraph img {
+    height: auto;
+    width: 90%;
+    border-radius: 20px;
+    margin: auto;
+}
+input[id="ABOUT"]:not(:checked) ~ .about-page .questions {
+    animation: about-questions-shrink-reverse 1s forwards;
+}
+input[id="ABOUT"]:checked ~ .about-page .questions {
+    animation: about-questions-shrink 1s forwards;
+}
+input[id="ABOUT"]:checked ~ .about-page .first-paragraph .text-first-paragraph p{
+    animation: about-first-paragraph-shrink 1s forwards;
+}
+input[id="ABOUT"]:not(:checked) ~ .about-page .image-first-about img {
+    animation: about-image-shrink-reverse 1s forwards;
+}
+input[id="ABOUT"]:checked ~ .about-page .first-paragraph .image-first-about img {
+    animation: about-image-shrink 1s forwards;
+}
+/* End Introduction */
 
 /* Go to menu Section */
 .Go-TO-Menu {
-    height: 80px;
+    height: fit-content;
     text-align: center;
     margin: auto;
     margin-top: 77px;
@@ -931,6 +1003,24 @@ nav ul a:hover {
         }
         100% {}
     }
+    @keyframes media-query-nav-bar {
+        100% {
+            margin-left: 16.5px;
+            margin-right: 16.5px;
+            padding-left: 21.5px;
+            padding-right: 21.5px;
+        }
+        0% {}
+    }
+    @keyframes media-query-nav-bar-off {
+        0% { 
+            margin-left: 16.5px;
+            margin-right: 16.5px;
+            padding-left: 21.5px;
+            padding-right: 21.5px;
+        }
+        100% {}
+    }
     /* End Nav Bar Keyframes */
 
     /* Title keyframes */
@@ -1135,3 +1225,60 @@ nav ul a:hover {
     }
     /* End Final/Grid Section */
 /* End Keyframes (Animations) */
+
+
+
+
+/* Media Queries */
+@media (max-width:900px) {
+    .nav-bar ul {
+        display: none;
+    }
+    .media-query-nav-bar {
+        display: nne;
+    }
+    .title-about-section {
+        margin-top: 50px;
+        display: block;
+    }
+    .title {
+        text-align: center;
+        margin: auto;
+        width: 80%;
+    }
+    .about {
+        /* border: 1px solid black; */
+        margin: auto;
+        width: 80%;
+        margin-top: 45px;
+    }
+    .about-page .questions {
+        padding-top: 25px;
+        line-height: 25px;
+        font-size: 20px;
+        margin-left: 25px;
+    }
+    .about-page .questions p {
+        border-bottom: 2px solid white;
+    }
+    .about-page .first-paragraph {
+        display: block;
+    }
+    .about-page .first-paragraph .text-first-paragraph p {
+        font-size: 15px;
+    }
+    .about-page .first-paragraph img {
+        height: auto;
+        width: 60%;
+        margin-bottom: 25px;
+    }
+}
+@media (min-width: 900px) {
+    .media-query-nav-bar {
+        display: none;
+    }
+    .menu-button {
+        display: none;
+    }
+}
+/* End Media Queries */
