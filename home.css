@@ -122,6 +122,10 @@ input[id="menu-button"]:checked ~ .media-query-nav-bar {
     transition: .9s;
     /* padding-top: 13.5px; */
 }
+.media-query-nav-bar .overflow {
+    height: 600px;
+    overflow-y: scroll;
+}
 .media-query-nav-bar ul li:hover {
     background-color: white;
     transition: .3s;
